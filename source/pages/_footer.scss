@@ -1,0 +1,15 @@
+.footer {
+    min-width: $max-width;
+    padding-top: 20px;
+    @include e('wrapper') {
+        @include outer-container();
+        border-top: 1px solid $divider-color;
+        padding-top: 22px;
+    }
+    @include e('menu') {
+        margin-bottom: 10px;
+    }
+    @include e('another') {
+    	color: $light-gray;
+    }
+}

@@ -1,0 +1,5 @@
+.idea
+node_modules
+static/img
+static/css
+static/js

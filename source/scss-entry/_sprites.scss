@@ -1,0 +1,162 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$ic-arrow-name: 'ic--arrow';
+$ic-arrow-x: 392px;
+$ic-arrow-y: 47px;
+$ic-arrow-offset-x: -392px;
+$ic-arrow-offset-y: -47px;
+$ic-arrow-width: 30px;
+$ic-arrow-height: 18px;
+$ic-arrow-total-width: 483px;
+$ic-arrow-total-height: 224px;
+$ic-arrow-image: '../img/sprites.png';
+$ic-arrow: (392px, 47px, -392px, -47px, 30px, 18px, 483px, 224px, '../img/sprites.png', 'ic--arrow', );
+$ic-auth-aicon-name: 'ic--auth aicon';
+$ic-auth-aicon-x: 422px;
+$ic-auth-aicon-y: 47px;
+$ic-auth-aicon-offset-x: -422px;
+$ic-auth-aicon-offset-y: -47px;
+$ic-auth-aicon-width: 20px;
+$ic-auth-aicon-height: 18px;
+$ic-auth-aicon-total-width: 483px;
+$ic-auth-aicon-total-height: 224px;
+$ic-auth-aicon-image: '../img/sprites.png';
+$ic-auth-aicon: (422px, 47px, -422px, -47px, 20px, 18px, 483px, 224px, '../img/sprites.png', 'ic--auth aicon', );
+$ic-dropballs-black-name: 'ic--dropballs-black';
+$ic-dropballs-black-x: 345px;
+$ic-dropballs-black-y: 47px;
+$ic-dropballs-black-offset-x: -345px;
+$ic-dropballs-black-offset-y: -47px;
+$ic-dropballs-black-width: 47px;
+$ic-dropballs-black-height: 101px;
+$ic-dropballs-black-total-width: 483px;
+$ic-dropballs-black-total-height: 224px;
+$ic-dropballs-black-image: '../img/sprites.png';
+$ic-dropballs-black: (345px, 47px, -345px, -47px, 47px, 101px, 483px, 224px, '../img/sprites.png', 'ic--dropballs-black', );
+$ic-dropballs-name: 'ic--dropballs';
+$ic-dropballs-x: 189px;
+$ic-dropballs-y: 47px;
+$ic-dropballs-offset-x: -189px;
+$ic-dropballs-offset-y: -47px;
+$ic-dropballs-width: 91px;
+$ic-dropballs-height: 151px;
+$ic-dropballs-total-width: 483px;
+$ic-dropballs-total-height: 224px;
+$ic-dropballs-image: '../img/sprites.png';
+$ic-dropballs: (189px, 47px, -189px, -47px, 91px, 151px, 483px, 224px, '../img/sprites.png', 'ic--dropballs', );
+$ic-line-left-name: 'ic--line-left';
+$ic-line-left-x: 280px;
+$ic-line-left-y: 47px;
+$ic-line-left-offset-x: -280px;
+$ic-line-left-offset-y: -47px;
+$ic-line-left-width: 65px;
+$ic-line-left-height: 135px;
+$ic-line-left-total-width: 483px;
+$ic-line-left-total-height: 224px;
+$ic-line-left-image: '../img/sprites.png';
+$ic-line-left: (280px, 47px, -280px, -47px, 65px, 135px, 483px, 224px, '../img/sprites.png', 'ic--line-left', );
+$ic-line-right-name: 'ic--line-right';
+$ic-line-right-x: 0px;
+$ic-line-right-y: 0px;
+$ic-line-right-offset-x: 0px;
+$ic-line-right-offset-y: 0px;
+$ic-line-right-width: 189px;
+$ic-line-right-height: 224px;
+$ic-line-right-total-width: 483px;
+$ic-line-right-total-height: 224px;
+$ic-line-right-image: '../img/sprites.png';
+$ic-line-right: (0px, 0px, 0px, 0px, 189px, 224px, 483px, 224px, '../img/sprites.png', 'ic--line-right', );
+$ic-logo-name: 'ic--logo';
+$ic-logo-x: 189px;
+$ic-logo-y: 0px;
+$ic-logo-offset-x: -189px;
+$ic-logo-offset-y: 0px;
+$ic-logo-width: 294px;
+$ic-logo-height: 47px;
+$ic-logo-total-width: 483px;
+$ic-logo-total-height: 224px;
+$ic-logo-image: '../img/sprites.png';
+$ic-logo: (189px, 0px, -189px, 0px, 294px, 47px, 483px, 224px, '../img/sprites.png', 'ic--logo', );
+$spritesheet-width: 483px;
+$spritesheet-height: 224px;
+$spritesheet-image: '../img/sprites.png';
+$spritesheet-sprites: ($ic-arrow, $ic-auth-aicon, $ic-dropballs-black, $ic-dropballs, $ic-line-left, $ic-line-right, $ic-logo, );
+$spritesheet: (483px, 224px, '../img/sprites.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

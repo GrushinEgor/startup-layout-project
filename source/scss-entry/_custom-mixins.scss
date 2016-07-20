@@ -1,0 +1,76 @@
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+/// @alias element
+@mixin e($element) {
+    @include element($element) {
+        @content;
+    }
+}
+
+/// @alias modifier
+@mixin m($modifier) {
+    @include modifier($modifier) {
+        @content;
+    }
+}
+
+
+@mixin blur($radius: 10px) {
+    -webkit-filter: blur($radius);
+    -moz-filter: blur($radius);
+    -o-filter: blur($radius);
+    -ms-filter: blur($radius);
+    filter: blur($radius);
+}
+
+@mixin non-select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin bg-block() {
+    background: $page-background-color;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+@mixin ellipsis() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+@mixin fa-styles() {
+    //Font awesome styles
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}

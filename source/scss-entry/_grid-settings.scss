@@ -1,0 +1,29 @@
+@import "neat-helpers"; // or "neat-helpers" when in Rails
+
+// Change the grid settings
+//$column: 77.9px;
+//$gutter: 15px;
+$grid-columns: 12;
+$max-width: 1000px;
+/*$visual-grid: true;
+$visual-grid-index: front;
+$visual-grid-color: red;*/
+
+// Define your breakpoints
+$first-breakpoint-value: 768px;
+$second-breakpoint-value: 1024px;
+$medium-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
+$large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
+
+//Example how to use
+//.element {
+//    @include media($medium-viewport) {
+//        @include span-columns(6);
+//        @include omega(2n);
+//    }
+//
+//    @include media($large-viewport) {
+//        @include span-columns(4);
+//        @include omega(3n);
+//    }
+//}

@@ -1,0 +1,31 @@
+.auto-rows {
+    @include clearfix;
+    @include e('item-wrapper') {
+        margin-bottom: 2.35765%;
+    }
+    @include m('2n') {
+        .auto-rows__item-wrapper {
+            @include span-columns(6);
+            @include omega(2n);
+        }
+    }
+    @include m('3n') {
+        .auto-rows__item-wrapper {
+            @include span-columns(4);
+            @include omega(3n);
+        }
+    }
+    @include m('4n') {
+        .auto-rows__item-wrapper {
+            @include span-columns(3);
+            @include omega(4n);
+        }
+    }
+    @include m('6n') {
+        .auto-rows__item-wrapper {
+            @include span-columns(2);
+            @include omega(6n);
+        }
+    }
+
+}

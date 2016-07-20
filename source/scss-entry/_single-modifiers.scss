@@ -1,0 +1,77 @@
+.full{
+    @include m('height') {
+        height: 100%;
+    }
+    @include m('width') {
+        width: 100%;
+    }
+}
+.text {
+    @include m('base') {
+        color: $base-font-color;
+    }
+    @include m('main') {
+        color: $main-color;
+    }
+    @include m('accent') {
+        color: $accent-color;
+    }
+
+    @include m('bold') {
+        font-weight: 700;
+    }
+    @include m('normal') {
+        font-weight: normal;
+    }
+    @include m('sm') {
+        font-size: 13px;
+    }
+    @include m('lg') {
+        font-size: 35px;
+    }
+    @include m('italic') {
+        font-style: italic;
+    }
+
+    @include m('lowercase') {
+        text-transform: lowercase;
+    }
+    @include m('uppercase') {
+        text-transform: uppercase;
+    }
+    @include m('capitalize') {
+        text-transform: capitalize;
+    }
+
+    @include m('center') {
+        text-align: center;
+    }
+    @include m('left') {
+        text-align: left;
+    }
+    @include m('right') {
+        text-align: right;
+    }
+
+    @include m('fail') {
+        color: $fail-color;
+    }
+    @include m('success') {
+        color: $success-color;
+    }
+    @include m('underline') {
+        text-decoration: underline;
+    }
+    @include m('dotted') {
+        padding-bottom: 3px;
+        border-bottom: 1px dotted $base-font-color;
+    }
+    @include m('break') {
+        display: block;
+    }
+}
+
+.after-break {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $divider-color;
+}

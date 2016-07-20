@@ -1,0 +1,16 @@
+@import 'sprites';
+@include sprites($spritesheet-sprites);
+
+.ic {
+    display: inline-block;
+    //@include m('map') {
+    //    background: url($image-path + 'svg/place_icon.svg') no-repeat;
+    //    @include size(11px 15px);
+//}
+}
+
+.fa-1hx {
+    font-size: 1.5em;
+}
+
+//@include sprites($spritesheet-sprites);
